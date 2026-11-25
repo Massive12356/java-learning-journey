@@ -1,0 +1,14 @@
+.registerBtn {
+    -fx-background-color: #1E90FF;
+}
+
+.registerBtn:hover {
+    -fx-background-color: #1874CD;
+}
+
+.cancelBtn {
+    -fx-background-color:#87CEEB ;
+}
+.cancelBtn:hover {
+    -fx-background-color: #8f2701;
+}

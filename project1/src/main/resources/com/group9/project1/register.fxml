@@ -13,7 +13,7 @@
 <?import javafx.scene.text.Font?>
 
 
-<AnchorPane prefHeight="585.0" prefWidth="520.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.group9.project1.RegisterController">
+<AnchorPane prefHeight="585.0" prefWidth="520.0" xmlns="http://javafx.com/javafx/26" stylesheets="@registerstyles.css" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.group9.project1.RegisterController">
    <children>
       <AnchorPane prefHeight="82.0" prefWidth="520.0" style="-fx-background-color: #1E90FF;">
          <children>
@@ -64,7 +64,7 @@
          </font>
       </Label>
       <PasswordField layoutX="87.0" layoutY="377.0" prefHeight="27.0" prefWidth="336.0" promptText="Enter Confrim Password" />
-      <Button layoutX="87.0" layoutY="443.0" mnemonicParsing="false" prefHeight="41.0" prefWidth="336.0" style="-fx-background-color: #1E90FF;" text="Register" textFill="WHITE">
+      <Button layoutX="87.0" layoutY="443.0" mnemonicParsing="false" prefHeight="41.0" prefWidth="336.0" styleClass="registerBtn" text="Register" textFill="WHITE">
          <font>
             <Font name="Verdana Bold" size="14.0" />
          </font>
@@ -72,7 +72,7 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
-      <Button layoutX="87.0" layoutY="499.0" mnemonicParsing="false" prefHeight="41.0" prefWidth="336.0" style="-fx-background-color: #87CEEB;" text="Cancel" textFill="WHITE">
+      <Button layoutX="87.0" layoutY="499.0" mnemonicParsing="false" prefHeight="41.0" prefWidth="336.0" styleClass="cancelBtn" text="Cancel" textFill="WHITE">
          <font>
             <Font name="Verdana Bold" size="14.0" />
          </font>
