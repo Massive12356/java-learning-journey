@@ -44,6 +44,7 @@ public class LoginController {
         // Creates a new Scene using the registration page layout
         // and replaces the current login page with it.
         stage.setScene(new Scene(root));
+        stage.setTitle("Registration Page");
     }
 
 }

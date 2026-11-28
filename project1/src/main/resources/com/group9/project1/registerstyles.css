@@ -1,14 +1,103 @@
+.register-container {
+    -fx-background-color: #FFFFFF;
+}
+
+.register-title {
+    -fx-font-family: "Verdana";
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #101828;
+}
+
+.register-subtitle {
+    -fx-font-family: "Verdana";
+    -fx-font-size: 11px;
+    -fx-text-fill: #8993A4;
+}
+
+.field-label {
+    -fx-font-family: "Verdana";
+    -fx-font-size: 11px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #64748B;
+}
+
+.input-container {
+    -fx-background-color: #F8FBFD;
+    -fx-border-color: #D7E1E9;
+    -fx-border-width: 1.2px;
+    -fx-border-radius: 8px;
+    -fx-background-radius: 8px;
+    -fx-padding: 0 12px;
+    -fx-pref-height: 43px;
+    -fx-min-height: 43px;
+}
+
+.custom-input {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-background-insets: 0;
+    -fx-border-insets: 0;
+    -fx-padding: 8px 0;
+    -fx-font-family: "Verdana";
+    -fx-font-size: 12px;
+    -fx-text-fill: #344054;
+    -fx-prompt-text-fill: #A0AAB8;
+}
+
 .registerBtn {
-    -fx-background-color: #1E90FF;
+    -fx-background-color: #0D354D;
+    -fx-background-radius: 30px;
+    -fx-border-radius: 30px;
+    -fx-text-fill: white;
+    -fx-font-family: "Verdana";
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+    -fx-alignment: CENTER;
 }
 
 .registerBtn:hover {
-    -fx-background-color: #1874CD;
+    -fx-background-color: #164C69;
 }
 
-.cancelBtn {
-    -fx-background-color:#87CEEB ;
+.registerBtn:pressed {
+    -fx-background-color: #09283B;
 }
-.cancelBtn:hover {
-    -fx-background-color: #8f2701;
+
+.login-arrow {
+    -fx-background-color: #45C5E8;
+    -fx-background-radius: 50%;
+    -fx-text-fill: #07344A;
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+    -fx-padding: 4px 6px;
+}
+
+.signupBtn {
+    -fx-background-color: white;
+    -fx-border-color: #8B98A8;
+    -fx-border-width: 1.2px;
+    -fx-border-radius: 30px;
+    -fx-background-radius: 30px;
+    -fx-text-fill: #344054;
+    -fx-font-family: "Verdana";
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+}
+
+.signupBtn:hover {
+    -fx-background-color: #F4F7FA;
+    -fx-border-color: #0D354D;
+}
+
+.signupBtn:pressed {
+    -fx-background-color: #E8EEF3;
+}
+
+.footer-text {
+    -fx-font-family: "Verdana";
+    -fx-font-size: 11px;
+    -fx-text-fill: #7B8794;
 }

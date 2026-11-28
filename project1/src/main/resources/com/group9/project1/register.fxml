@@ -1,92 +1,101 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Hyperlink?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
-<?import javafx.scene.effect.Glow?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.text.Font?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
 
-
-<AnchorPane prefHeight="585.0" prefWidth="520.0" xmlns="http://javafx.com/javafx/26" stylesheets="@registerstyles.css" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.group9.project1.RegisterController">
-   <children>
-      <AnchorPane prefHeight="82.0" prefWidth="520.0" style="-fx-background-color: #1E90FF;">
+<BorderPane prefHeight="618.0" prefWidth="909.0" stylesheets="@registerstyles.css" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.group9.project1.RegisterController">
+   <left>
+      <AnchorPane prefHeight="686.0" prefWidth="454.0" BorderPane.alignment="CENTER">
          <children>
-            <ImageView fitHeight="86.0" fitWidth="115.0" layoutX="14.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="620.0" fitWidth="482.0" layoutX="-20.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@assets/logoShied.png" />
+                  <Image url="@assets/register%20image.png" />
                </image>
             </ImageView>
-            <Label layoutX="100.0" layoutY="35.0" prefHeight="18.0" prefWidth="154.0" text="User Registration" textFill="WHITE">
-               <font>
-                  <Font name="Verdana Bold" size="15.0" />
-               </font>
-            </Label>
-            <Label layoutX="108.0" layoutY="63.0" text="Kindly Register with  your  Details Below " textFill="WHITE">
-               <font>
-                  <Font name="Verdana Bold Italic" size="12.0" />
-               </font>
-            </Label>
          </children>
       </AnchorPane>
-      <Label layoutX="86.0" layoutY="114.0" text="Firstname" textFill="#565050">
-         <font>
-            <Font name="Verdana Bold" size="13.0" />
-         </font>
-      </Label>
-      <TextField layoutX="86.0" layoutY="140.0" prefHeight="27.0" prefWidth="336.0" promptText="Enter Firstname" />
-      <Label layoutX="87.0" layoutY="176.0" text="Lastname" textFill="#565050">
-         <font>
-            <Font name="Verdana Bold" size="13.0" />
-         </font>
-      </Label>
-      <TextField layoutX="86.0" layoutY="199.0" prefHeight="27.0" prefWidth="336.0" promptText="Enter Lastname" />
-      <Label layoutX="86.0" layoutY="234.0" text="Username" textFill="#565050">
-         <font>
-            <Font name="Verdana Bold" size="13.0" />
-         </font>
-      </Label>
-      <TextField layoutX="86.0" layoutY="260.0" prefHeight="27.0" prefWidth="336.0" promptText="Enter Username" />
-      <Label layoutX="85.0" layoutY="295.0" text="Password" textFill="#565050">
-         <font>
-            <Font name="Verdana Bold" size="13.0" />
-         </font>
-      </Label>
-      <PasswordField layoutX="86.0" layoutY="319.0" prefHeight="27.0" prefWidth="336.0" promptText="Enter Password" />
-      <Label layoutX="79.0" layoutY="354.0" text=" Confirm Password" textFill="#565050">
-         <font>
-            <Font name="Verdana Bold" size="13.0" />
-         </font>
-      </Label>
-      <PasswordField layoutX="87.0" layoutY="377.0" prefHeight="27.0" prefWidth="336.0" promptText="Enter Confrim Password" />
-      <Button layoutX="87.0" layoutY="443.0" mnemonicParsing="false" prefHeight="41.0" prefWidth="336.0" styleClass="registerBtn" text="Register" textFill="WHITE">
-         <font>
-            <Font name="Verdana Bold" size="14.0" />
-         </font>
-         <cursor>
-            <Cursor fx:constant="HAND" />
-         </cursor>
-      </Button>
-      <Button layoutX="87.0" layoutY="499.0" mnemonicParsing="false" prefHeight="41.0" prefWidth="336.0" styleClass="cancelBtn" text="Cancel" textFill="WHITE">
-         <font>
-            <Font name="Verdana Bold" size="14.0" />
-         </font>
-         <cursor>
-            <Cursor fx:constant="HAND" />
-         </cursor>
-      </Button>
-      <Label layoutX="105.0" layoutY="550.0" text="Already have an account?" />
-      <Hyperlink layoutX="240.0" layoutY="545.0" onAction="#handleLogin" text="Login" />
-   </children>
-   <cursor>
-      <Cursor fx:constant="DEFAULT" />
-   </cursor>
-   <effect>
-      <Glow />
-   </effect>
-</AnchorPane>
+   </left>
+   <right>
+      <AnchorPane prefHeight="641.0" prefWidth="446.0" styleClass="register-container" BorderPane.alignment="CENTER">
+         <children>
+            <VBox alignment="CENTER" spacing="10.0" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="65.0" AnchorPane.rightAnchor="65.0" AnchorPane.topAnchor="15.0">
+               <padding>
+                  <Insets bottom="5.0" top="5.0" />
+               </padding>
+
+               <VBox alignment="CENTER" spacing="5.0">
+                  <Label styleClass="register-title" text="Create Account" />
+                  <Label styleClass="register-subtitle" text="Enter your details below to register" />
+               </VBox>
+
+               <VBox spacing="6.0">
+                  <Label styleClass="field-label" text="Firstname" />
+                  <HBox alignment="CENTER_LEFT" styleClass="input-container">
+                     <TextField promptText="Enter Firstname" styleClass="custom-input" HBox.hgrow="ALWAYS" />
+                  </HBox>
+               </VBox>
+
+               <VBox spacing="6.0">
+                  <Label styleClass="field-label" text="Lastname" />
+                  <HBox alignment="CENTER_LEFT" styleClass="input-container">
+                     <TextField promptText="Enter Lastname" styleClass="custom-input" HBox.hgrow="ALWAYS" />
+                  </HBox>
+               </VBox>
+
+               <VBox spacing="6.0">
+                  <Label styleClass="field-label" text="Username" />
+                  <HBox alignment="CENTER_LEFT" styleClass="input-container">
+                     <TextField promptText="Enter Username" styleClass="custom-input" HBox.hgrow="ALWAYS" />
+                  </HBox>
+               </VBox>
+
+               <VBox spacing="6.0">
+                  <Label styleClass="field-label" text="Password" />
+                  <HBox alignment="CENTER_LEFT" styleClass="input-container">
+                     <PasswordField promptText="Enter Password" styleClass="custom-input" HBox.hgrow="ALWAYS" />
+                  </HBox>
+               </VBox>
+
+               <VBox spacing="6.0">
+                  <Label styleClass="field-label" text="Confirm Password" />
+                  <HBox alignment="CENTER_LEFT" styleClass="input-container">
+                     <PasswordField promptText="Enter Confirm Password" styleClass="custom-input" HBox.hgrow="ALWAYS" />
+                  </HBox>
+               </VBox>
+
+               <StackPane maxWidth="Infinity">
+                  <Button maxWidth="Infinity" mnemonicParsing="false" prefHeight="44.0" styleClass="registerBtn" text="Register">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Label mouseTransparent="true" styleClass="login-arrow" text="➜" StackPane.alignment="CENTER_RIGHT">
+                     <StackPane.margin>
+                        <Insets right="14.0" />
+                     </StackPane.margin>
+                  </Label>
+               </StackPane>
+
+               <Label styleClass="footer-text" text="Already have an account?" />
+
+               <Button maxWidth="Infinity" mnemonicParsing="false" onAction="#handleLogin" prefHeight="44.0" styleClass="signupBtn" text="Login">
+                  <cursor>
+                     <Cursor fx:constant="HAND" />
+                  </cursor>
+               </Button>
+            </VBox>
+         </children>
+      </AnchorPane>
+   </right>
+</BorderPane>

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Hyperlink?>
@@ -10,73 +11,118 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
-<?import javafx.scene.text.Font?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" prefHeight="476.0" prefWidth="823.0" xmlns="http://javafx.com/javafx/26" stylesheets="@loginstyles.css" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.group9.project1.LoginController">
+<BorderPane prefHeight="572.0" prefWidth="823.0" stylesheets="@loginstyles.css" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.group9.project1.LoginController">
+
+   <!-- LEFT SIDE IMAGE - PRESERVED -->
    <left>
-      <AnchorPane prefHeight="407.0" prefWidth="228.0" BorderPane.alignment="CENTER">
+      <AnchorPane prefWidth="228.0" BorderPane.alignment="CENTER">
+
          <children>
-            <ImageView fitHeight="648.0" fitWidth="428.0" layoutX="-13.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="698.0" fitWidth="518.0" layoutX="-13.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@assets/sideImage.png" />
                </image>
             </ImageView>
          </children>
-      </AnchorPane>
-   </left>
-   <right>
-      <AnchorPane layoutX="119.0" layoutY="51.0" prefHeight="476.0" prefWidth="409.0" style="-fx-background-color: #FFFFFF;" BorderPane.alignment="CENTER">
-         <children>
-            <ImageView fitHeight="50.0" fitWidth="60.0" layoutX="194.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@assets/access-control.png" />
-               </image>
-            </ImageView>
-            <Label layoutX="60.0" layoutY="167.0" text="Username" textFill="#565050">
-               <font>
-                  <Font name="Verdana Bold" size="13.0" />
-               </font>
-            </Label>
-            <TextField fx:id="usernameTextField" layoutX="145.0" layoutY="161.0" prefHeight="28.0" prefWidth="213.0" promptText="Enter Username" />
-            <Label layoutX="62.0" layoutY="224.0" text="Password" textFill="#565050">
-               <font>
-                  <Font name="Verdana Bold" size="13.0" />
-               </font>
-            </Label>
-            <PasswordField fx:id="enterPasswordField" layoutX="145.0" layoutY="218.0" prefHeight="28.0" prefWidth="216.0" promptText="Enter Password" />
-            <Button fx:id="loginButton" layoutX="125.0" layoutY="285.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="238.0" styleClass="loginBtn" text="Login" textFill="WHITE" wrapText="true">
-               <font>
-                  <Font name="Verdana Bold" size="14.0" />
-               </font>
-               <cursor>
-                  <Cursor fx:constant="HAND" />
-               </cursor>
-            </Button>
-            <Button fx:id="cancelButton" layoutX="125.0" layoutY="338.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="238.0" styleClass="cancelBtn" text="Cancel" textFill="WHITE" wrapText="true">
-               <font>
-                  <Font name="Verdana Bold" size="14.0" />
-               </font>
-               <cursor>
-                  <Cursor fx:constant="HAND" />
-               </cursor>
-            </Button>
-            <Label layoutX="145.0" layoutY="76.0" text="Welcome Back">
-               <font>
-                  <Font name="Verdana Bold" size="18.0" />
-               </font>
-            </Label>
-            <Label layoutX="145.0" layoutY="105.0" text="Please enter your details below ">
-               <font>
-                  <Font name="Verdana" size="11.0" />
-               </font>
-            </Label>
-            <Label layoutX="91.0" layoutY="397.0" text="Don't have an account?" />
-            <Hyperlink layoutX="215.0" layoutY="395.0" onAction="#handleSignUp" text="Sign Up" />
-         </children>
-         <cursor>
-            <Cursor fx:constant="DEFAULT" />
-         </cursor>
 
       </AnchorPane>
+   </left>
+
+   <!-- RIGHT SIDE LOGIN FORM -->
+   <right>
+      <AnchorPane styleClass="login-container" BorderPane.alignment="CENTER">
+
+         <children>
+
+            <VBox alignment="CENTER" spacing="15.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="65.0" AnchorPane.rightAnchor="65.0" AnchorPane.topAnchor="25.0">
+
+               <padding>
+                  <Insets bottom="5.0" top="5.0" />
+               </padding>
+
+               <!-- HEADER ICON -->
+               <ImageView fitHeight="48.0" fitWidth="55.0" preserveRatio="true">
+                  <image>
+                     <Image url="@assets/access-control.png" />
+                  </image>
+               </ImageView>
+
+               <!-- TITLE -->
+               <VBox alignment="CENTER" spacing="5.0">
+                  <Label styleClass="login-title" text="Welcome Back" />
+
+                  <Label styleClass="login-subtitle" text="Please enter your details below" />
+               </VBox>
+
+               <!-- USERNAME -->
+               <VBox spacing="6.0">
+                  <Label styleClass="field-label" text="Username" />
+
+                  <HBox alignment="CENTER_LEFT" spacing="12.0" styleClass="input-container">
+
+                     <Label styleClass="field-icon" text="✉" />
+
+                     <TextField fx:id="usernameTextField" promptText="Enter Username" styleClass="custom-input" HBox.hgrow="ALWAYS" />
+                  </HBox>
+               </VBox>
+
+               <!-- PASSWORD -->
+               <VBox spacing="6.0">
+                  <Label styleClass="field-label" text="Password" />
+
+                  <HBox alignment="CENTER_LEFT" spacing="12.0" styleClass="input-container">
+
+                     <Label styleClass="field-icon" text="🔒" />
+
+                     <PasswordField fx:id="enterPasswordField" promptText="Enter Password" styleClass="custom-input" HBox.hgrow="ALWAYS" />
+                  </HBox>
+               </VBox>
+
+               <!-- LOGIN BUTTON -->
+               <StackPane maxWidth="Infinity">
+                  <Button fx:id="loginButton" maxWidth="Infinity" mnemonicParsing="false" prefHeight="44.0" styleClass="loginBtn" text="Login">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+
+                  <Label mouseTransparent="true" styleClass="login-arrow" text="➜" StackPane.alignment="CENTER_RIGHT">
+                     <StackPane.margin>
+                        <Insets right="14.0" />
+                     </StackPane.margin>
+                  </Label>
+               </StackPane>
+
+               <!-- SIGN UP TEXT -->
+               <Label styleClass="footer-text" text="Don't have an account?" />
+
+               <!-- SIGN UP BUTTON -->
+               <Button fx:id="signUpButton" maxWidth="Infinity" mnemonicParsing="false" onAction="#handleSignUp" prefHeight="44.0" styleClass="signupBtn" text="Sign Up">
+
+                  <cursor>
+                     <Cursor fx:constant="HAND" />
+                  </cursor>
+               </Button>
+
+               <!-- TERMS -->
+               <HBox alignment="CENTER" spacing="4.0">
+                  <Label styleClass="terms-text" text="By continuing, you agree to" />
+
+                  <Hyperlink styleClass="terms-link" text="Terms &amp; Conditions" />
+
+                  <Label styleClass="terms-text" text="&amp;" />
+
+                  <Hyperlink styleClass="terms-link" text="Privacy Policy" />
+               </HBox>
+
+            </VBox>
+
+         </children>
+      </AnchorPane>
    </right>
+
 </BorderPane>

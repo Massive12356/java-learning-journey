@@ -1,16 +1,142 @@
+
+/* MAIN CONTAINER */
+.login-container {
+    -fx-background-color: #FFFFFF;
+}
+
+/* TITLE */
+.login-title {
+    -fx-font-family: "Verdana";
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #101828;
+}
+
+.login-subtitle {
+    -fx-font-family: "Verdana";
+    -fx-font-size: 11px;
+    -fx-text-fill: #8993A4;
+}
+
+/* FIELD LABELS */
+.field-label {
+    -fx-font-family: "Verdana";
+    -fx-font-size: 11px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #64748B;
+}
+
+/* INPUT CONTAINER */
+.input-container {
+    -fx-background-color: #F8FBFD;
+    -fx-border-color: #D7E1E9;
+    -fx-border-width: 1.2px;
+    -fx-border-radius: 8px;
+    -fx-background-radius: 8px;
+    -fx-padding: 0 12px;
+    -fx-pref-height: 43px;
+    -fx-min-height: 43px;
+}
+
+/* INPUT ICONS */
+.field-icon {
+    -fx-font-family: "Segoe UI Symbol";
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #34495E;
+    -fx-min-width: 23px;
+    -fx-alignment: CENTER;
+}
+
+/* TEXT FIELDS */
+.custom-input {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-background-insets: 0;
+    -fx-border-insets: 0;
+    -fx-padding: 8px 0;
+    -fx-font-family: "Verdana";
+    -fx-font-size: 12px;
+    -fx-text-fill: #344054;
+    -fx-prompt-text-fill: #A0AAB8;
+}
+
+/* LOGIN BUTTON */
 .loginBtn {
-    -fx-background-color: #1E90FF;
+    -fx-background-color: #0D354D;
+    -fx-background-radius: 30px;
+    -fx-border-radius: 30px;
+    -fx-text-fill: white;
+    -fx-font-family: "Verdana";
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+    -fx-alignment: CENTER;
 }
 
 .loginBtn:hover {
-    -fx-background-color: #1874CD;
+    -fx-background-color: #164C69;
 }
 
-.cancelBtn {
-    -fx-background-color:#87CEEB ;
+.loginBtn:pressed {
+    -fx-background-color: #09283B;
 }
-.cancelBtn:hover {
-    -fx-background-color: #822401;
 
+/* LOGIN ARROW */
+.login-arrow {
+    -fx-background-color: #45C5E8;
+    -fx-background-radius: 50%;
+    -fx-text-fill: #07344A;
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+    -fx-padding: 4px 6px;
+}
 
+/* SIGN UP BUTTON */
+.signupBtn {
+    -fx-background-color: white;
+    -fx-border-color: #8B98A8;
+    -fx-border-width: 1.2px;
+    -fx-border-radius: 30px;
+    -fx-background-radius: 30px;
+    -fx-text-fill: #344054;
+    -fx-font-family: "Verdana";
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+}
+
+.signupBtn:hover {
+    -fx-background-color: #F4F7FA;
+    -fx-border-color: #0D354D;
+}
+
+.signupBtn:pressed {
+    -fx-background-color: #E8EEF3;
+}
+
+/* SIGN UP TEXT */
+.footer-text {
+    -fx-font-family: "Verdana";
+    -fx-font-size: 11px;
+    -fx-text-fill: #7B8794;
+}
+
+/* TERMS */
+.terms-text {
+    -fx-font-family: "Verdana";
+    -fx-font-size: 8px;
+    -fx-text-fill: #8993A4;
+}
+
+.terms-link {
+    -fx-font-family: "Verdana";
+    -fx-font-size: 8px;
+    -fx-text-fill: #36A9D0;
+    -fx-border-color: transparent;
+    -fx-underline: false;
+}
+
+.terms-link:hover {
+    -fx-underline: true;
 }

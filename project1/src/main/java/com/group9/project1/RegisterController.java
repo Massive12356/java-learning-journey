@@ -21,5 +21,6 @@ public class RegisterController {
 
     // Display the login page in current window
     stage.setScene(new Scene(root));
+    stage.setTitle("Login Page");
     }
 }
